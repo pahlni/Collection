@@ -1,0 +1,33 @@
+CIS 263 Project 2 - Collections
+Name: ______________________
+Due Date 
+at the start of class on Monday, July 25.
+Before Starting the Project
+Read the entire project description before starting. This is an individual assignment.
+Learning Objectives
+After completing this project you should be able to utilize appropriate collections to solve case studies.
+Rubric
+25 pts commented and readable code________________
+25 pts elegant source code________________
+25 pts concise design________________
+25 pts results during testing________________
+
+Background
+The collections covered in CIS 263 are widely used in software development. Select one of the following options for this project. The exact design, data flow, dataset, and program control flow is up to you, but be sure to highlight the collection in your solution.
+Option 1: Temporal map
+Download a dataset containing historical stock prices (timestamp, stock symbol, and price). Use a map, hashmap, or key-value store to store all of the content. Write functions to 1) get all of the symbols and prices for a given time or 2) get all of the timestamps and prices for a given stock symbol. Provide sample output to demonstrate your two functions.
+Option 2: In-memory file system
+Download a dataset (e.g., via Project Gutenberg) containing several long text files (i.e., to use as in-memory strings). Read in each file from the local directory/file system. Use a tree (e.g., B+ tree) to store each of the loaded files. Consider creating a class to store the filename, filetype, content, and other metadata for each document. Write functions to 1) prompt the user to create/store a new file with ALL the required content and 2) allow a user to request a given document (e.g., by filename), retrieve it from the in-memory storage, and return the content to the user. Provide sample output with a new short document to demonstrate your two functions.
+Option 3: In-memory database
+Create a class to serve as the schema for a database table. The scope of the class is up to you (e.g., vehicles, property, customers, etc.). Read in object data from a file on the local directory/file system, assume all of the records you read are complete and conform to your schema, using any data you wish. Note: instead of hardcoding the datatype and name of the variables in your schema/class, you might consider using a vector or map to store a variable name/data without hardcoding either. Use a tree (e.g., B+ tree) to store each of the records. Write functions to 1) prompt the user to create/store a new record with ALL the required content to match your existing data and 2) allow a user to request a given document (e.g., by providing a value for a unique variable/primary key), retrieve it from the in-memory storage, and return the content to the user. Provide sample output with a new record to demonstrate your two functions.
+Testing and submission:
+Name your program using your last name, e.g., LeidigProject2.cpp. Bundle your program and turn in all files required to run your program. Also, include a sample output of your program as described above.
+Ensure you include suitable documentation for your 1) overall project of ~1 page and 2) source code. Include an appropriate comment block at the top of your program.
+oHardcopy (1st page of this document, 1 page overview, code, testing result with required input data) 
+oSoftcopy (zipped if needed) to blackboard of only your code
+Grading Criteria
+There is a 50% penalty on programming projects if your solution does not execute or generates errors. 
+There is a 50% penalty for not turning in both a softcopy and hardcopy in class 
+Any options/approaches/requirements not specified in this document are left for your own decision making, in keeping with the spirit of the assignment.
+Late Policy
+Projects are due at the START of the class period and not accepted later. Not turning in the hard copy or soft copy by the due date is considered a late/missing project unless PRIOR arrangements are made.
