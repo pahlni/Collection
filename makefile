@@ -8,3 +8,7 @@ PahlProject2 : PahlProject2.o
 
 PahlProject2.o: PahlProject2.cpp
 	$(CC) $(CFLAGS) -c PahlProject2.cpp
+
+clean:
+	rm *~
+	rm *.o

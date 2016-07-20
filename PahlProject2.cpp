@@ -13,18 +13,37 @@ class Stocks{
 
 public:
   Stocks();
-
-  void printStock(){
+  
+  void printDate(string date){
     map<string, map<string,double>>::iterator it = stocks.begin();
+
+    cout << date << " stock info:" << endl;
+
     while(it != stocks.end()){
       map<string,double>::iterator itDate = it->second.begin();
       while(itDate != it->second.end()){
-	cout << it->first << itDate->first << itDate->second << endl;
+	if(itDate->first == date){
+	  cout << it->first << " $" << itDate->second <<endl;
+	}
 	itDate++;
       }
     
     it++;
     }
+  }
+
+   void printStock(string symbol){
+
+     cout.setf(ios_base::fixed, ios_base::floatfield);
+     cout.precision(2);
+
+     map<string,double>::iterator itDate = stocks[symbol].begin();
+
+     cout << symbol << " stock info:" << endl;
+     while(itDate != stocks[symbol].end()){
+       cout << itDate->first << " $" << itDate->second << endl;
+       itDate++;
+     }    
   }
 
 };
@@ -46,6 +65,8 @@ Stocks::Stocks(){
     i = 0;
     while(getline(iss, temp, ',')){
       if(i == 0){
+	temp.insert(4,"-");
+	temp.insert(7,"-");
 	date = temp;
       } else if (i == 1){
 	if(symbol == "");
@@ -68,31 +89,18 @@ Stocks::Stocks(){
 
 int main(){
   Stocks stocks;
-
-  stocks.printStock(); 
   
-  /*
-  map<string, double> temp;
+  string stockSymbol;
+  string stockDate;
 
-  temp["20010101"] = 2.12;
-  temp["20010102"] = 2.13;
-  stocks["A"] = temp;
-  temp.clear();
-  temp["20010103"] = 2.14;
-  temp["20010104"] = 2.15;
-  stocks["B"] = temp;
+  cout << "Enter a stock symbol:" << endl;
+  cin >> stockSymbol;
+
+  stocks.printStock(stockSymbol); 
+
+  cout << "Enter a date between 2009-08-21 and 2010-08-20 in that format" << endl;
+  cin >> stockDate;
+
+  stocks.printDate(stockDate);
   
-
-  map<string, map<string,double>>::iterator it = stocks.begin();
-  while(it != stocks.end()){
-    map<string,double>::iterator itDate = it->second.begin();
-    while(itDate != it->second.end()){
-      cout << it->first << itDate->first << itDate->second << endl;
-      itDate++;
-    }
-    
-    it++;
-  }
-*/
-
 }
